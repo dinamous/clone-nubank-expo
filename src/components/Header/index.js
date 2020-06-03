@@ -1,10 +1,17 @@
 import React from 'react';
-import { View } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons'; 
 
-import { Container } from './styles';
+import logo from '../../assets/Nubank_Logo.png'
+import { Container,Top,Logo,Title } from './styles';
 
 export default function Header(){
     return(
-        <Container/>
+        <Container>
+            <Top>
+                <Logo source={logo}/>
+                <Title>Matheus</Title>
+            </Top>
+            <MaterialIcons name="keyboard-arrow-down" size={24} color="white" />
+        </Container>
     );
 }
