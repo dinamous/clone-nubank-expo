@@ -11,11 +11,11 @@ flex:1;
 background:#FFF;
 border-radius:4px;
 margin:0 20px;
-height:80%;
+height:100%;
 position:absolute;
 left:0;
 right:0;
-top:300px;
+top:0px;
 `;
 
 export const CardHeader = styled.View`
