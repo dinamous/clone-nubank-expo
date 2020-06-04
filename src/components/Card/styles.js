@@ -1,10 +1,10 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
-  flex:1;
-  max-height:350px;
-  z-index:5;
-`;
+// export const Container = styled.View`
+//   flex:1;
+//   max-height:350px;
+//   z-index:5;
+// `;
 
 export const Cardx = styled.View`
 flex:1;

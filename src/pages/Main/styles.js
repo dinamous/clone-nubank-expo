@@ -5,3 +5,9 @@ export const Container = styled.View`
   background:#8b10ae;
   justify-content:center;
 `;
+
+export const Content = styled.View`
+  flex:1;
+  max-height:350px;
+  z-index:5;
+`;

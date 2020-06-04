@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+
 import { Ionicons,Entypo,MaterialIcons,MaterialCommunityIcons,AntDesign } from '@expo/vector-icons';
 
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+
 import { MaterialIcons } from '@expo/vector-icons';
 
-import { Container,Cardx,CardHeader,CardContent,CardFooter,Title, Description,Annotation} from './styles';
+import { Cardx,CardHeader,CardContent,CardFooter,Title, Description,Annotation} from './styles';
 
 export default function Card(){
     return(
-        <Container>
+        
             <Cardx>
                 <CardHeader>
                     <MaterialIcons name="attach-money" size={28} color="#666" />
@@ -20,6 +20,6 @@ export default function Card(){
                     <Annotation>Tranferência de R$15,00 recebida de Yasmin hoje às 14:00h</Annotation>
                 </CardFooter>
             </Cardx>
-        </Container>
+       
     );
 };
