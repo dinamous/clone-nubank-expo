@@ -1,67 +1,66 @@
-import React from 'react';
+import React from "react";
 
-import { Ionicons,Entypo,MaterialIcons,MaterialCommunityIcons,AntDesign } from '@expo/vector-icons';
+import {
+  Container,
+  TabsContainer,
+  TabItem,
+  TabItemLast,
+  TabText,
+} from "./styles";
 
+import Icon from "react-native-vector-icons/MaterialIcons";
 
-import { Container,TabsContainer,TabItem,TabText } from './styles';
+export default function Tabs({ translateY }) {
+  return (
+    <Container
+      style={{
+        transform: [
+          {
+            translateY: translateY.interpolate({
+              inputRange: [0, 380],
+              outputRange: [0, 50],
+              extrapolate: "clamp",
+            }),
+          },
+        ],
+        opacity: translateY.interpolate({
+          inputRange: [0, 380],
+          outputRange: [1, 0.3],
+          extrapolate: "clamp",
+        }),
+      }}
+    >
+      <TabsContainer>
+        <TabItem>
+          <Icon name="person-add" size={24} color="#FFF" />
+          <TabText>Indicar amigos</TabText>
+        </TabItem>
 
-export default function Tabs(){
-    return(
-        <Container>
-            <TabsContainer>
-                <TabItem>
-                    <Ionicons name="ios-person-add" size={24} color="white" />
-                    <TabText>Indicar Amigos</TabText>
-                </TabItem>
-                <TabItem>
-                    <Entypo name="chat" size={24} color="white" />
-                    <TabText>Cobrar</TabText>
-                </TabItem>
-                <TabItem>
-                <MaterialIcons name="smartphone" size={24} color="white" />
-                    <TabText>Recarga de celular</TabText>
-                </TabItem>
-                <TabItem>
-                    <Entypo name="chat" size={24} color="white" />
-                    <TabText>Dividir Valor</TabText>
-                </TabItem>
-                <TabItem>
-                    <MaterialIcons name="attach-money" size={24} color="white" />
-                    <TabText>Doar</TabText>
-                </TabItem>
-                <TabItem>
-                    <MaterialIcons name="arrow-downward" size={24} color="white" />
-                    <TabText>Depositar</TabText>
-                </TabItem>
-                <TabItem>
-                    <MaterialIcons name="arrow-upward" size={24} color="white" />
-                    <TabText>Tranferir</TabText>
-                </TabItem>
-                <TabItem>
-                    <MaterialIcons name="arrow-upward" size={24} color="white" />
-                    <TabText>Tranferir</TabText>
-                </TabItem>
-                <TabItem>
-                    <Ionicons name="md-options" size={24} color="white" />  
-                    <TabText>Ajustar Limite</TabText>
-                </TabItem>
-                <TabItem>
-                    <Ionicons name="ios-help-circle-outline" size={24} color="white" />  
-                    <TabText>Me Ajuda</TabText>
-                </TabItem>
-                <TabItem>
-                    <MaterialCommunityIcons name="barcode" size={24} color="white" />  
-                    <TabText>Pagar</TabText>
-                </TabItem>
-                <TabItem>
-                <MaterialIcons name="lock-open" size={24} color="white" />  
-                    <TabText>Bloquear Cartão</TabText>
-                </TabItem>
-                <TabItem>
-                    <AntDesign name="creditcard" size={24} color="white" />  
-                    <TabText>Cartão Virtual</TabText>
-                </TabItem>
-            </TabsContainer>
-        </Container>
-    )
-};
+        <TabItem>
+          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <TabText>Cobrar</TabText>
+        </TabItem>
+
+        <TabItem>
+          <Icon name="arrow-downward" size={24} color="#FFF" />
+          <TabText>Depositar</TabText>
+        </TabItem>
+
+        <TabItem>
+          <Icon name="arrow-upward" size={24} color="#FFF" />
+          <TabText>Transferir</TabText>
+        </TabItem>
+
+        <TabItem>
+          <Icon name="lock" size={24} color="#FFF" />
+          <TabText>Bloquear cartão</TabText>
+        </TabItem>
+
+        <TabItemLast>
+          <Icon name="sort" size={24} color="#FFF" />
+          <TabText>Organizar atalhos</TabText>
+        </TabItemLast>
+      </TabsContainer>
+    </Container>
+  );
+}

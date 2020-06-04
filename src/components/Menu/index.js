@@ -1,56 +1,127 @@
-import React from 'react';
-
-import { Container,Code,QRCode,Nav,NavItem,NavText,SignOut,SignOutText } from './styles';
-import { MaterialIcons,MaterialCommunityIcons,Ionicons } from '@expo/vector-icons';
-
-import QRcode from '../../assets/qrcode.png'
+import React from "react";
 
 
-export default function Menu(){
-    return(
-        <Container>
-            <Code>
-                <QRCode source={QRcode}/>
-            </Code>
+import {
+  Container,
+  Code,
+  QRCode,
+  Nav,
+  NavItem,
+  NavText,
+  SignOutButton,
+  SignOutButtonText,
+  AccountInfo,
+  AccountInfoText,
+  AccountInfoTextBold,
+} from "./styles";
 
-            <Nav>
-                <NavItem>
-                    <MaterialIcons name="help-outline" size={24} color="white" />
-                    <NavText>Me ajuda</NavText>
-                </NavItem>
+import Icon from "react-native-vector-icons/MaterialIcons";
+import image from "../../assets/qrcode.png"
 
-                <NavItem>
-                    <Ionicons name="ios-person-add" size={24} color="white" />
-                    <NavText>Perfil</NavText>
-                </NavItem>
+export default function Menu({ translateY }) {
+  return (
+    <Container
+      style={{
+        opacity: translateY.interpolate({
+          inputRange: [0, 150],
+          outputRange: [0, 1],
+        }),
+      }}
+    >
+      <Code>
+        <QRCode
+          source={image}
+        />
+      </Code>
 
-                
+      <AccountInfo>
+        <AccountInfoText>
+          Banco
+          <AccountInfoTextBold> 123 - Nu Pagamentos S.A</AccountInfoTextBold>
+        </AccountInfoText>
 
-                <NavItem>
-                    <MaterialCommunityIcons name="coin" size={24} color="white" />
-                    <NavText>Configurar conta</NavText>
-                </NavItem>
-                
-                <NavItem>
-                    <MaterialIcons name="credit-card" size={24} color="white" />
-                    <NavText>Configurar Cartão</NavText>
-                </NavItem>
-                
-                <NavItem>
-                    <MaterialIcons name="store" size={24} color="white" />
-                    <NavText>Pedir conta PJ</NavText>
-                </NavItem>
-                
-                <NavItem>
-                    <MaterialIcons name="smartphone" size={24} color="white" />
-                    <NavText>Configurações do app</NavText>
-                </NavItem>
-                
+        <AccountInfoText>
+          Agência
+          <AccountInfoTextBold> 1010</AccountInfoTextBold>
+        </AccountInfoText>
 
-                <SignOut onPress={()=>{}}> 
-                    <SignOutText>SAIR DA CONTA</SignOutText>
-                </SignOut>
-            </Nav>
-        </Container>
-    );
-};
+        <AccountInfoText>
+          Conta
+          <AccountInfoTextBold> 050505-5</AccountInfoTextBold>
+        </AccountInfoText>
+      </AccountInfo>
+
+      <Nav>
+        <NavItem>
+          <Icon name="help-outline" size={20} color="#FFF" />
+          <NavText>Me ajuda</NavText>
+          <Icon
+            name="keyboard-arrow-right"
+            size={16}
+            color="#FFF"
+            style={{ marginLeft: "auto" }}
+          />
+        </NavItem>
+
+        <NavItem>
+          <Icon name="person-outline" size={20} color="#FFF" />
+          <NavText>Perfil</NavText>
+          <Icon
+            name="keyboard-arrow-right"
+            size={16}
+            color="#FFF"
+            style={{ marginLeft: "auto" }}
+          />
+        </NavItem>
+
+        <NavItem>
+          <Icon name="account-balance" size={20} color="#FFF" />
+          <NavText>Configurações conta</NavText>
+          <Icon
+            name="keyboard-arrow-right"
+            size={16}
+            color="#FFF"
+            style={{ marginLeft: "auto" }}
+          />
+        </NavItem>
+
+        <NavItem>
+          <Icon name="credit-card" size={20} color="#FFF" />
+          <NavText>Configurar Cartão</NavText>
+          <Icon
+            name="keyboard-arrow-right"
+            size={16}
+            color="#FFF"
+            style={{ marginLeft: "auto" }}
+          />
+        </NavItem>
+
+        <NavItem>
+          <Icon name="account-balance-wallet" size={20} color="#FFF" />
+          <NavText>Pedir conta PJ</NavText>
+          <Icon
+            name="keyboard-arrow-right"
+            size={16}
+            color="#FFF"
+            style={{ marginLeft: "auto" }}
+          />
+        </NavItem>
+
+        <NavItem>
+          <Icon name="smartphone" size={20} color="#FFF" />
+          <NavText>Configurações do app</NavText>
+          <Icon
+            name="keyboard-arrow-right"
+            size={16}
+            color="#FFF"
+            style={{ marginLeft: "auto" }}
+          />
+        </NavItem>
+      </Nav>
+
+      <SignOutButton onPress={() => {}}>
+        <SignOutButtonText>SAIR DO APP</SignOutButtonText>
+      </SignOutButton>
+    </Container>
+  );
+}
