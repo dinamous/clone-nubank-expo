@@ -16,19 +16,19 @@ export const Code = styled.View`
 
 export const AccountInfo = styled.View`
   align-items: center;
-  margin-top: 10px;
+  margin-top: 30px;
 `;
 
 export const AccountInfoText = styled.Text`
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   margin-bottom: 2px;
 `;
 
 export const AccountInfoTextBold = styled.Text`
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
 `;
 
@@ -36,19 +36,19 @@ export const Nav = styled.View`
   width: 100%;
   margin-top: 20px;
   border-top-width: ${StyleSheet.hairlineWidth}px;
-  border-top-color: rgba(255, 255, 255, 0.7);
+  border-top-color: rgba(255, 255, 255, 0.4);
 `;
 
 export const NavItem = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
-  padding: 12px 0;
+  padding: 13px 0;
   border-bottom-width: ${StyleSheet.hairlineWidth}px;
-  border-bottom-color: rgba(255, 255, 255, 0.7);
+  border-bottom-color: rgba(255, 255, 255, 0.4);
 `;
 
 export const NavText = styled.Text`
-  font-size: 15px;
+  font-size: 16px;
   color: #fff;
   margin-left: 20px;
 `;

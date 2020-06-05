@@ -14,10 +14,9 @@ import { CardHeader,CardContent,CardFooter,Title, Description,Annotation} from '
 
 export default function Main() {
   let offset = 0;
-
   const translateY = new Animated.Value(0);
 
-  const animatedEvent = new Animated.event(
+  const animatedEvent = Animated.event(
     [
       {
         nativeEvent: {
@@ -25,10 +24,10 @@ export default function Main() {
         },
       },
     ],
-    { useNativeDriver: true }
+    { useNativeDriver: true },
   );
 
-  function onHandlerStateChange(event) {
+  function onHandlerStateChanged(event) {
     if (event.nativeEvent.oldState === State.ACTIVE) {
       let opened = false;
       const { translationY } = event.nativeEvent;
@@ -38,8 +37,8 @@ export default function Main() {
       if (translationY >= 100) {
         opened = true;
       } else {
-        translateY.setOffset(offset);
-        translateY.setValue(0);
+        translateY.setValue(offset);
+        translateY.setOffset(0);
         offset = 0;
       }
 
@@ -64,7 +63,7 @@ export default function Main() {
 
         <PanGestureHandler
           onGestureEvent={animatedEvent}
-          onHandlerStateChange={onHandlerStateChange}
+          onHandlerStateChange={onHandlerStateChanged}
         >
           <Card
             style={{

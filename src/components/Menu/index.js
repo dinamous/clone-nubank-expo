@@ -53,7 +53,7 @@ export default function Menu({ translateY }) {
 
       <Nav>
         <NavItem>
-          <Icon name="help-outline" size={20} color="#FFF" />
+          <Icon name="help-outline" size={24} color="#FFF" />
           <NavText>Me ajuda</NavText>
           <Icon
             name="keyboard-arrow-right"
@@ -64,7 +64,7 @@ export default function Menu({ translateY }) {
         </NavItem>
 
         <NavItem>
-          <Icon name="person-outline" size={20} color="#FFF" />
+          <Icon name="person-outline" size={24} color="#FFF" />
           <NavText>Perfil</NavText>
           <Icon
             name="keyboard-arrow-right"
@@ -75,7 +75,7 @@ export default function Menu({ translateY }) {
         </NavItem>
 
         <NavItem>
-          <Icon name="account-balance" size={20} color="#FFF" />
+          <Icon name="account-balance" size={24} color="#FFF" />
           <NavText>Configurações conta</NavText>
           <Icon
             name="keyboard-arrow-right"
@@ -86,7 +86,7 @@ export default function Menu({ translateY }) {
         </NavItem>
 
         <NavItem>
-          <Icon name="credit-card" size={20} color="#FFF" />
+          <Icon name="credit-card" size={24} color="#FFF" />
           <NavText>Configurar Cartão</NavText>
           <Icon
             name="keyboard-arrow-right"
@@ -97,7 +97,7 @@ export default function Menu({ translateY }) {
         </NavItem>
 
         <NavItem>
-          <Icon name="account-balance-wallet" size={20} color="#FFF" />
+          <Icon name="account-balance-wallet" size={24} color="#FFF" />
           <NavText>Pedir conta PJ</NavText>
           <Icon
             name="keyboard-arrow-right"
@@ -108,7 +108,7 @@ export default function Menu({ translateY }) {
         </NavItem>
 
         <NavItem>
-          <Icon name="smartphone" size={20} color="#FFF" />
+          <Icon name="smartphone" size={24} color="#FFF" />
           <NavText>Configurações do app</NavText>
           <Icon
             name="keyboard-arrow-right"
