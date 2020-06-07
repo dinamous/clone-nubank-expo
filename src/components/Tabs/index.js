@@ -26,6 +26,9 @@ export default function Tabs({ translateY }) {
   function navigateToCobrar() {
     navigation.navigate('Cobrar')
   }
+  function navigateToDoacao() {
+    navigation.navigate('Doacao')
+  }
 
   return (
     <Container
@@ -70,7 +73,7 @@ export default function Tabs({ translateY }) {
         </TabItem>
 
         
-        <TabItem>
+        <TabItem onPress={navigateToDoacao}>
           <Icon name="sentiment-very-satisfied" size={24} color="#FFF" />
           <TabText>Doação</TabText>
         </TabItem>

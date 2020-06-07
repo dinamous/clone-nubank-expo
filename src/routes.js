@@ -9,7 +9,7 @@ import Amigos from './pages/Amigos'
 import DividirValor from './pages/DividirValor'
 import RecargaCelular from './pages/RecargaCelular'
 import Cobrar from './pages/Cobrar'
-// import Details from './pages/Detail'
+import Doacao from './pages/Doacao'
 
 export default function Routes() {
   return (
@@ -21,6 +21,7 @@ export default function Routes() {
         <AppStack.Screen name="Amigos" component={ Amigos }/>
         <AppStack.Screen name="RecargaCelular" component={ RecargaCelular }/>
         <AppStack.Screen name="Cobrar" component={ Cobrar }/>
+        <AppStack.Screen name="Doacao" component={ Doacao }/>
         
        
       </AppStack.Navigator>
