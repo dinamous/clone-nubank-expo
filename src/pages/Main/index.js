@@ -2,6 +2,7 @@ import React from "react";
 
 import { Animated } from "react-native";
 import { PanGestureHandler, State } from "react-native-gesture-handler";
+import { useNavigation } from '@react-navigation/native'
 
 import Header from "../../components/Header";
 import Tabs from "../../components/Tabs";
@@ -13,6 +14,7 @@ import { Container, Content, Card } from "./styles";
 import { CardHeader,CardContent,CardFooter,Title, Description,Annotation} from './styles';
 
 export default function Main() {
+  const navigation = useNavigation()
   let offset = 0;
   const translateY = new Animated.Value(0);
 
@@ -26,6 +28,8 @@ export default function Main() {
     ],
     { useNativeDriver: true },
   );
+
+ 
 
   function onHandlerStateChanged(event) {
     if (event.nativeEvent.oldState === State.ACTIVE) {

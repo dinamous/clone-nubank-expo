@@ -7,10 +7,15 @@ import {
   TabItemLast,
   TabText,
 } from "./styles";
-
+import { useNavigation } from '@react-navigation/native'
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 export default function Tabs({ translateY }) {
+  const navigation = useNavigation();
+  function navigateToAmigoss() {
+    navigation.navigate('Amigos')
+  }
+
   return (
     <Container
       style={{
@@ -31,14 +36,32 @@ export default function Tabs({ translateY }) {
       }}
     >
       <TabsContainer>
-        <TabItem>
+        <TabItem onPress={navigateToAmigoss}>
           <Icon name="person-add" size={24} color="#FFF" />
           <TabText>Indicar amigos</TabText>
+        </TabItem>
+
+        
+        <TabItem>
+          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <TabText>Dividir valor</TabText>
+        </TabItem>
+
+        
+        <TabItem>
+          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <TabText>Recarga de celular</TabText>
         </TabItem>
 
         <TabItem>
           <Icon name="chat-bubble-outline" size={24} color="#FFF" />
           <TabText>Cobrar</TabText>
+        </TabItem>
+
+        
+        <TabItem>
+          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <TabText>Doação</TabText>
         </TabItem>
 
         <TabItem>
@@ -51,9 +74,33 @@ export default function Tabs({ translateY }) {
           <TabText>Transferir</TabText>
         </TabItem>
 
+        
+        <TabItem>
+          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <TabText>Ajustar limite</TabText>
+        </TabItem>
+
+        
+        <TabItem>
+          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <TabText>Me ajuda</TabText>
+        </TabItem>
+
+        
+        <TabItem>
+          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <TabText>Pagar</TabText>
+        </TabItem>
+
         <TabItem>
           <Icon name="lock" size={24} color="#FFF" />
           <TabText>Bloquear cartão</TabText>
+        </TabItem>
+
+        
+        <TabItem>
+          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <TabText>Cartão Virtual</TabText>
         </TabItem>
 
         <TabItemLast>

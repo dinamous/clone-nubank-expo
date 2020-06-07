@@ -1,7 +1,23 @@
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 
-import Main from './pages/Main';
+const AppStack = createStackNavigator()
 
-const Routes = createAppContainer(createSwitchNavigator({ Main }));
+import Main from './pages/Main'
+import Amigos from './pages/Amigos'
+// import Details from './pages/Detail'
 
-export default Routes;
+export default function Routes() {
+  return (
+    <NavigationContainer>
+
+      <AppStack.Navigator screenOptions={{ headerShown: false }}>
+        <AppStack.Screen name="Home" component={ Main }/>
+        <AppStack.Screen name="Amigos" component={ Amigos }/>
+        {/* <AppStack.Screen name="Details" component={ Details }/> */}
+      </AppStack.Navigator>
+
+    </NavigationContainer>
+  )
+}
