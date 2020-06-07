@@ -23,6 +23,9 @@ export default function Tabs({ translateY }) {
   function navigateToRecargaCelular() {
     navigation.navigate('RecargaCelular')
   }
+  function navigateToCobrar() {
+    navigation.navigate('Cobrar')
+  }
 
   return (
     <Container
@@ -61,7 +64,7 @@ export default function Tabs({ translateY }) {
           <TabText>Recarga de celular</TabText>
         </TabItem>
 
-        <TabItem>
+        <TabItem onPress={navigateToCobrar}>
           <Icon name="account-balance-wallet" size={24} color="#FFF" />
           <TabText>Cobrar</TabText>
         </TabItem>

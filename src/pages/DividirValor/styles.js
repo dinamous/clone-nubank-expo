@@ -62,14 +62,16 @@ export const CirculoTexto = styled.Text`
 color:#666;
 margin-top:5px;
 `;
-export const BtnEnviar = styled.View`
+
+export const BtnEnviar = styled.TouchableOpacity`
 border-top-width:1px;
-border-top-color:#ccc;
+border-top-color:#eee;
 flex:1;
 width:100%;
 align-items:center;
-margin-top:60px;
+margin-top:70px;
 padding:10px;
+height:100%;
 `;
 
 export const BtnEnviarMenssagem = styled.Text`

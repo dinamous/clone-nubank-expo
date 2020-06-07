@@ -66,7 +66,7 @@ export default function Amigos(){
             </BtnAddPessoas>
 
             <BtnEnviar>
-                <BtnEnviarMenssagem> ENVIAR PEDIDO</BtnEnviarMenssagem>
+                <BtnEnviarMenssagem> ENVIAR PEDIDO </BtnEnviarMenssagem>
             </BtnEnviar>
             </Content>
 
