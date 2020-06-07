@@ -13,8 +13,12 @@ import { AntDesign,Feather,Octicons } from '@expo/vector-icons';
 
 export default function Tabs({ translateY }) {
   const navigation = useNavigation();
+  
   function navigateToAmigoss() {
     navigation.navigate('Amigos')
+  }
+  function navigateToDividirValor() {
+    navigation.navigate('DividirValor')
   }
 
   return (
@@ -43,7 +47,7 @@ export default function Tabs({ translateY }) {
         </TabItem>
 
         
-        <TabItem>
+        <TabItem onPress={navigateToDividirValor}>
           <Icon name="payment" size={24} color="#FFF" />
           <TabText>Dividir valor</TabText>
         </TabItem>
