@@ -9,6 +9,7 @@ import {
 } from "./styles";
 import { useNavigation } from '@react-navigation/native'
 import Icon from "react-native-vector-icons/MaterialIcons";
+import { AntDesign,Feather,Octicons } from '@expo/vector-icons';
 
 export default function Tabs({ translateY }) {
   const navigation = useNavigation();
@@ -43,24 +44,24 @@ export default function Tabs({ translateY }) {
 
         
         <TabItem>
-          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <Icon name="payment" size={24} color="#FFF" />
           <TabText>Dividir valor</TabText>
         </TabItem>
 
         
         <TabItem>
-          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <Icon name="stay-current-portrait" size={24} color="#FFF" />
           <TabText>Recarga de celular</TabText>
         </TabItem>
 
         <TabItem>
-          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <Icon name="account-balance-wallet" size={24} color="#FFF" />
           <TabText>Cobrar</TabText>
         </TabItem>
 
         
         <TabItem>
-          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <Icon name="sentiment-very-satisfied" size={24} color="#FFF" />
           <TabText>Doação</TabText>
         </TabItem>
 
@@ -76,19 +77,19 @@ export default function Tabs({ translateY }) {
 
         
         <TabItem>
-          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+        <Octicons name="settings" size={24} color="white" />
           <TabText>Ajustar limite</TabText>
         </TabItem>
 
         
         <TabItem>
-          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <Feather name="help-circle" size={24} color="white" />
           <TabText>Me ajuda</TabText>
         </TabItem>
 
         
         <TabItem>
-          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+          <AntDesign name="barcode" size={24} color="white" />
           <TabText>Pagar</TabText>
         </TabItem>
 
@@ -99,7 +100,7 @@ export default function Tabs({ translateY }) {
 
         
         <TabItem>
-          <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+         <AntDesign name="creditcard" size={24} color="white" />
           <TabText>Cartão Virtual</TabText>
         </TabItem>
 

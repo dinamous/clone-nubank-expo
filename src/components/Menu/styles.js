@@ -36,7 +36,7 @@ export const Nav = styled.View`
   width: 100%;
   margin-top: 20px;
   border-top-width: ${StyleSheet.hairlineWidth}px;
-  border-top-color: rgba(255, 255, 255, 0.4);
+  border-top-color: rgba(255, 255, 255, 0.6);
 `;
 
 export const NavItem = styled.TouchableOpacity`
@@ -44,7 +44,7 @@ export const NavItem = styled.TouchableOpacity`
   align-items: center;
   padding: 13px 0;
   border-bottom-width: ${StyleSheet.hairlineWidth}px;
-  border-bottom-color: rgba(255, 255, 255, 0.4);
+  border-bottom-color: rgba(255, 255, 255, 0.6);
 `;
 
 export const NavText = styled.Text`
@@ -54,8 +54,8 @@ export const NavText = styled.Text`
 `;
 
 export const SignOutButton = styled.TouchableOpacity`
-  border-width: ${StyleSheet.hairlineWidth}px;
-  border-color: rgba(255, 255, 255, 0.7);
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 1);
   border-radius: 4px;
   justify-content: center;
   align-items: center;
