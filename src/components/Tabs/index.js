@@ -20,6 +20,9 @@ export default function Tabs({ translateY }) {
   function navigateToDividirValor() {
     navigation.navigate('DividirValor')
   }
+  function navigateToRecargaCelular() {
+    navigation.navigate('RecargaCelular')
+  }
 
   return (
     <Container
@@ -53,7 +56,7 @@ export default function Tabs({ translateY }) {
         </TabItem>
 
         
-        <TabItem>
+        <TabItem onPress={navigateToRecargaCelular}>
           <Icon name="stay-current-portrait" size={24} color="#FFF" />
           <TabText>Recarga de celular</TabText>
         </TabItem>
