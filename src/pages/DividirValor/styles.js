@@ -43,7 +43,7 @@ margin:50px 0;
 
 export const CirculoMensagem = styled.Text`
 color:#FFF;
-font-size:15px;
+font-size:12px;
 `;
 
 export const BtnAddPessoas = styled.View`
