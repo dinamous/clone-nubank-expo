@@ -39,19 +39,19 @@ justify-content:center;
 
 export const Title = styled.Text`
 font-size:15px;
-color:#999
+color:#999;
 `;
 
 export const Description = styled.Text`
 font-size:36px;
 margin-top:3px;
-color:#333
+color:#333;
 `;
 
 export const CardFooter = styled.View`
 padding:30px;
 background:#eee;
-border-radius:4px
+border-radius:4px;
 `;
 
 export const Annotation = styled.Text`
