@@ -35,6 +35,9 @@ export default function Tabs({ translateY }) {
   function navigateToTransferir() {
     navigation.navigate('Transferir')
   }
+  function navigateToAjustarLimite() {
+    navigation.navigate('AjustarLimite')
+  }
 
   return (
     <Container
@@ -95,7 +98,7 @@ export default function Tabs({ translateY }) {
         </TabItem>
 
         
-        <TabItem>
+        <TabItem onPress={navigateToAjustarLimite}>
         <Octicons name="settings" size={24} color="white" />
           <TabText>Ajustar limite</TabText>
         </TabItem>
