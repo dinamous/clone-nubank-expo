@@ -32,6 +32,9 @@ export default function Tabs({ translateY }) {
   function navigateToDepositar() {
     navigation.navigate('Depositar')
   }
+  function navigateToTransferir() {
+    navigation.navigate('Transferir')
+  }
 
   return (
     <Container
@@ -86,7 +89,7 @@ export default function Tabs({ translateY }) {
           <TabText>Depositar</TabText>
         </TabItem>
 
-        <TabItem>
+        <TabItem onPress={navigateToTransferir}>
           <Icon name="arrow-upward" size={24} color="#FFF" />
           <TabText>Transferir</TabText>
         </TabItem>

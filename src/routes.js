@@ -11,6 +11,7 @@ import RecargaCelular from './pages/RecargaCelular'
 import Cobrar from './pages/Cobrar'
 import Doacao from './pages/Doacao'
 import Depositar from './pages/Depositar'
+import Transferir from './pages/Transferir'
 
 export default function Routes() {
   return (
@@ -24,6 +25,7 @@ export default function Routes() {
         <AppStack.Screen name="Cobrar" component={ Cobrar }/>
         <AppStack.Screen name="Doacao" component={ Doacao }/>
         <AppStack.Screen name="Depositar" component={ Depositar }/>
+        <AppStack.Screen name="Transferir" component={ Transferir }/>
         
        
       </AppStack.Navigator>
