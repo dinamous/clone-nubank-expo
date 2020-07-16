@@ -13,6 +13,7 @@ import Doacao from './pages/Doacao'
 import Depositar from './pages/Depositar'
 import Transferir from './pages/Transferir'
 import AjustarLimite from './pages/AjustarLimite'
+import Ajuda from './pages/Ajuda'
 
 export default function Routes() {
   return (
@@ -28,6 +29,7 @@ export default function Routes() {
         <AppStack.Screen name="Depositar" component={ Depositar }/>
         <AppStack.Screen name="Transferir" component={ Transferir }/>
         <AppStack.Screen name="AjustarLimite" component={ AjustarLimite }/>
+        <AppStack.Screen name="Ajuda" component={ Ajuda }/>
         
        
       </AppStack.Navigator>

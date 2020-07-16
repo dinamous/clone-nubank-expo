@@ -38,6 +38,9 @@ export default function Tabs({ translateY }) {
   function navigateToAjustarLimite() {
     navigation.navigate('AjustarLimite')
   }
+  function navigateToAjuda() {
+    navigation.navigate('Ajuda')
+  }
 
   return (
     <Container
@@ -104,7 +107,7 @@ export default function Tabs({ translateY }) {
         </TabItem>
 
         
-        <TabItem>
+        <TabItem onPress={navigateToAjuda}>
           <Feather name="help-circle" size={24} color="white" />
           <TabText>Me ajuda</TabText>
         </TabItem>
